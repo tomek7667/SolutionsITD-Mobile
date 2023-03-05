@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class MainApp extends StatefulWidget {
-  const MainApp({super.key});
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
   @override
-  State<MainApp> createState() => _MainAppState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _MainAppState extends State<MainApp> {
+class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
