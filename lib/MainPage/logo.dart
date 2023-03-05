@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:mobile/utils/app_colors.dart';
 
 class AppLogo extends StatelessWidget {
@@ -17,7 +15,7 @@ class AppLogo extends StatelessWidget {
         ),
         border: Border.all(
           color: AppColors.darkGray,
-          width: 4.0,
+          width: 0.0,
         ),
         borderRadius: const BorderRadius.all(
           Radius.elliptical(24, 24),

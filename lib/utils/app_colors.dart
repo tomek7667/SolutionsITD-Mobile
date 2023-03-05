@@ -7,6 +7,7 @@ class AppColors {
   static const Color gray = Color(0xff393e46);
   static const Color turquoise = Color(0xff00adb5);
   static const Color white = Color(0xffeeeeee);
+  static const Color gold = Color(0xffe0c700);
   // Gradient colors
   static const List<Color> gradients = [
     Color(0xffe0c700),
