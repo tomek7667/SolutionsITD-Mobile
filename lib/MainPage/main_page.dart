@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mobile/CustomerPages/main_grid.dart';
+import 'package:mobile/MainPage/logo.dart';
 import 'package:mobile/utils/app_colors.dart';
 
 class MainPage extends StatefulWidget {
@@ -15,9 +16,10 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 64,
         backgroundColor: AppColors.gray,
-        title: Text(
-          AppLocalizations.of(context).mainPage_name,
+        title: const Center(
+          child: AppLogo(),
         ),
       ),
       body: Column(
