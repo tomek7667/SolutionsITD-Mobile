@@ -30,6 +30,11 @@ class _CustomerTileState extends State<CustomerTile> {
           backgroundColor: MaterialStateProperty.all<Color>(
             AppColors.turquoise,
           ),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(24.0),
+            ),
+          ),
         ),
         child: Text(widget.name),
       ),
