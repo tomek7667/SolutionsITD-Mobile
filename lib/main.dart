@@ -4,9 +4,11 @@ import 'package:mobile/MainPage/connection_type_provider.dart';
 import 'package:mobile/MainPage/main_page_filter_provider.dart';
 import 'package:mobile/routers.dart';
 import 'package:mobile/utils/app_colors.dart';
+import 'package:mobile/utils/app_data.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
+  await appData.initialize();
   runApp(
     MultiProvider(
       providers: [
