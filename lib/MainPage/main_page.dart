@@ -5,6 +5,8 @@ import 'package:solutions_itd_mobile/MainPage/logo.dart';
 import 'package:solutions_itd_mobile/MainPage/main_page_filter_provider.dart';
 import 'package:solutions_itd_mobile/utils/app_colors.dart';
 import 'package:provider/provider.dart';
+import 'package:solutions_itd_mobile/utils/app_data.dart';
+import 'package:solutions_itd_mobile/utils/screens.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -23,6 +25,15 @@ class _MainPageState extends State<MainPage> {
         title: const Center(
           child: AppLogo(),
         ),
+        actions: [
+          if (appData.user == null)
+            IconButton(
+              icon: const Icon(Icons.person),
+              onPressed: () {
+                Navigator.pushNamed(context, Screens.authentication);
+              },
+            ),
+        ],
       ),
       body: Column(
         children: [
