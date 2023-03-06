@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mobile/BusinessPages/main_grid.dart';
-import 'package:mobile/MainPage/logo.dart';
-import 'package:mobile/MainPage/main_page_filter_provider.dart';
-import 'package:mobile/utils/app_colors.dart';
+import 'package:solutions_itd_mobile/BusinessPages/main_grid.dart';
+import 'package:solutions_itd_mobile/MainPage/logo.dart';
+import 'package:solutions_itd_mobile/MainPage/main_page_filter_provider.dart';
+import 'package:solutions_itd_mobile/utils/app_colors.dart';
 import 'package:provider/provider.dart';
 
 class MainPage extends StatefulWidget {

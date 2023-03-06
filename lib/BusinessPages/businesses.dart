@@ -1,5 +1,5 @@
-import 'package:mobile/BusinessPages/business_data.dart';
-import 'package:mobile/utils/screens.dart';
+import 'package:solutions_itd_mobile/BusinessPages/business_data.dart';
+import 'package:solutions_itd_mobile/utils/screens.dart';
 
 List<BusinessData> companies = [
   BusinessData(

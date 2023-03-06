@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mobile/BusinessPages/business_tile.dart';
-import 'package:mobile/BusinessPages/businesses.dart';
-import 'package:mobile/MainPage/main_page_filter_provider.dart';
+import 'package:solutions_itd_mobile/BusinessPages/business_tile.dart';
+import 'package:solutions_itd_mobile/BusinessPages/businesses.dart';
+import 'package:solutions_itd_mobile/MainPage/main_page_filter_provider.dart';
 import 'package:provider/provider.dart';
 
 class MainGrid extends StatefulWidget {

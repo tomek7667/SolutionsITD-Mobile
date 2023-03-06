@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mobile/MainPage/connection_type_provider.dart';
-import 'package:mobile/MainPage/main_page_filter_provider.dart';
-import 'package:mobile/routers.dart';
-import 'package:mobile/utils/app_colors.dart';
-import 'package:mobile/utils/app_data.dart';
+import 'package:solutions_itd_mobile/MainPage/connection_type_provider.dart';
+import 'package:solutions_itd_mobile/MainPage/main_page_filter_provider.dart';
+import 'package:solutions_itd_mobile/routers.dart';
+import 'package:solutions_itd_mobile/utils/app_colors.dart';
+import 'package:solutions_itd_mobile/utils/app_data.dart';
 import 'package:provider/provider.dart';
 
 void main() async {

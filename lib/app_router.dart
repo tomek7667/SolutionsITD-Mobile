@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/MainPage/main_page.dart';
-import 'package:mobile/utils/screens.dart';
+import 'package:solutions_itd_mobile/MainPage/main_page.dart';
+import 'package:solutions_itd_mobile/utils/screens.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {

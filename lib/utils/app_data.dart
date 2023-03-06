@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:device_info/device_info.dart';
 import 'package:flutter/services.dart';
-import 'package:mobile/MainPage/models/device_info.dart';
-import 'package:mobile/MainPage/models/user.dart';
+import 'package:solutions_itd_mobile/MainPage/models/device_info.dart';
+import 'package:solutions_itd_mobile/MainPage/models/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 

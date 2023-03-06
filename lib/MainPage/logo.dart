@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/utils/app_colors.dart';
+import 'package:solutions_itd_mobile/utils/app_colors.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({super.key});

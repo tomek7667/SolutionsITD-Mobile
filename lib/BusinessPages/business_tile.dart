@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mobile/BusinessPages/business_data.dart';
-import 'package:mobile/utils/app_colors.dart';
+import 'package:solutions_itd_mobile/BusinessPages/business_data.dart';
+import 'package:solutions_itd_mobile/utils/app_colors.dart';
 
 class BusinessTile extends StatefulWidget {
   static BusinessTile create(BusinessData businessData) {
