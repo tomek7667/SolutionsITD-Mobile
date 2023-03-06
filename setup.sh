@@ -8,3 +8,7 @@ else
     echo -e "\033[0;31mFlutter version is not 3.7.6 or Dart version is not 2.19.3\033[0m"
     exit 1
 fi
+
+flutter pub get
+flutter gen-l10n
+./lint.sh
