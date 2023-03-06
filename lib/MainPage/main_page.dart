@@ -38,7 +38,7 @@ class _MainPageState extends State<MainPage> {
               autocorrect: true,
               enableSuggestions: true,
               onChanged: (value) {
-                Provider.of<MainPageFilterProvider>(context, listen: false)
+                Provider.of<MainPageProvider>(context, listen: false)
                     .setFilter(value.toLowerCase());
               },
             ),

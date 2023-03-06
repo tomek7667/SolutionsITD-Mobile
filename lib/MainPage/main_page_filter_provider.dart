@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
-class MainPageFilterProvider with ChangeNotifier {
-  String _filter = '';
+class MainPageData {
+  String filter = '';
+}
 
-  String get filter => _filter;
+class MainPageProvider with ChangeNotifier {
+  final MainPageData _data = MainPageData();
+
+  MainPageData get data => _data;
 
   void setFilter(String filter) {
-    _filter = filter;
+    _data.filter = filter;
     notifyListeners();
   }
 }

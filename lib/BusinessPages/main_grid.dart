@@ -16,18 +16,20 @@ class MainGrid extends StatefulWidget {
 class _MainGridState extends State<MainGrid> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<MainPageFilterProvider>(
-      builder: (context, mainPageFilterProvider, child) {
+    return Consumer<MainPageProvider>(
+      builder: (context, mainPageProvider, child) {
+        var count = ((MediaQuery.of(context).size.width) / 128).round() - 1;
+        count = count > 0 ? count : 1;
         return GridView.count(
           crossAxisSpacing: 24,
           mainAxisSpacing: 24,
-          crossAxisCount: 3,
+          crossAxisCount: count,
           childAspectRatio: 5 / 6,
           padding: const EdgeInsets.all(24),
           scrollDirection: Axis.vertical,
           children: companies
               .where((businessData) {
-                var filterText = mainPageFilterProvider.filter;
+                var filterText = mainPageProvider.data.filter;
                 var appNameFiltered = businessData.name.contains(filterText);
                 var keywordsFiltered = businessData.keywords.any((keyword) {
                   return keyword.contains(filterText);
