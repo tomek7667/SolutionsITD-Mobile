@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:auth0_flutter/auth0_flutter.dart';
 import 'package:device_info/device_info.dart';
 import 'package:flutter/services.dart';
 import 'package:solutions_itd_mobile/MainPage/models/device_info.dart';
@@ -10,7 +11,7 @@ import 'package:uuid/uuid.dart';
 
 class AppData {
   User? user;
-  String? authToken;
+  String? accessToken;
   static final DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
   DeviceInfo? deviceInfo;
 
@@ -18,18 +19,27 @@ class AppData {
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       final userJson = prefs.getString('user');
-      authToken = prefs.getString('auth_token');
+      accessToken = prefs.getString('access_oken');
       if (userJson != null) {
         final data = json.decode(userJson);
-        // user = User.fromJson(data['data']);
-      } else if (authToken != null) {
+        user = User.fromJson(data['data']);
+      } else if (userJson != null) {
         // await api.fetchUser();
       }
       await _setDeviceInfo();
-    } catch (err) {
-      // ignore: avoid_print
-      print(err);
-    }
+    } catch (err) {}
+  }
+
+  Future<void> setUser(UserProfile user) async {
+    this.user = User(oAuthUserProfile: user);
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('user', json.encode(this.user!.toJson()));
+  }
+
+  Future<void> setAccessToken(String accessToken) async {
+    this.accessToken = accessToken;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('access_token', accessToken);
   }
 
   Future<void> _setDeviceInfo() async {

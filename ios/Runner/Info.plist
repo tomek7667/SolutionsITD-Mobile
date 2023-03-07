@@ -4,6 +4,21 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+            <string>None</string>
+            <key>CFBundleURLName</key>
+            <string>auth0</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.solutionsitd.mobile</string>
+            </array>
+		</dict>
+	</array>
+
 	<key>CFBundleDisplayName</key>
 	<string>Mobile</string>
 	<key>CFBundleExecutable</key>

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:solutions_itd_mobile/Authentication/auth.dart';
 import 'package:solutions_itd_mobile/BusinessPages/main_grid.dart';
+import 'package:solutions_itd_mobile/MainPage/drawer_item.dart';
 import 'package:solutions_itd_mobile/MainPage/logo.dart';
 import 'package:solutions_itd_mobile/MainPage/main_page_filter_provider.dart';
 import 'package:solutions_itd_mobile/utils/app_colors.dart';
 import 'package:provider/provider.dart';
 import 'package:solutions_itd_mobile/utils/app_data.dart';
-import 'package:solutions_itd_mobile/utils/screens.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -26,14 +27,46 @@ class _MainPageState extends State<MainPage> {
           child: AppLogo(),
         ),
         actions: [
-          if (appData.user == null)
-            IconButton(
-              icon: const Icon(Icons.person),
-              onPressed: () {
-                Navigator.pushNamed(context, Screens.authentication);
-              },
+          if (appData.user?.profileUrl != null)
+            Container(
+              margin: const EdgeInsets.only(bottom: 12),
+              child: CircleAvatar(
+                radius: 56,
+                child: ClipOval(
+                  child: Image.network(
+                    appData.user!.profileUrl.toString(),
+                  ),
+                ),
+              ),
             ),
         ],
+      ),
+      drawer: Drawer(
+        child: Center(
+          heightFactor: 2.0,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (appData.user == null)
+                DrawerButton(
+                  onPressed: () {
+                    AuthAPI.authenticate(loadingContext: context);
+                    Navigator.of(context).pop();
+                  },
+                  iconData: Icons.person,
+                  text: AppLocalizations.of(context).mainPage_authenticate,
+                ),
+              DrawerButton(
+                onPressed: () {
+                  AuthAPI.unauthenticate(loadingContext: context);
+                  Navigator.of(context).pop();
+                },
+                iconData: Icons.logout,
+                text: AppLocalizations.of(context).mainPage_logout,
+              ),
+            ],
+          ),
+        ),
       ),
       body: Column(
         children: [

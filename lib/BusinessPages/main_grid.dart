@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:solutions_itd_mobile/BusinessPages/business_tile.dart';
 import 'package:solutions_itd_mobile/BusinessPages/businesses.dart';
@@ -18,7 +16,7 @@ class _MainGridState extends State<MainGrid> {
   Widget build(BuildContext context) {
     return Consumer<MainPageProvider>(
       builder: (context, mainPageProvider, child) {
-        var count = ((MediaQuery.of(context).size.width) / 128).round() - 1;
+        var count = ((MediaQuery.of(context).size.width) / 128).round();
         count = count > 0 ? count : 1;
         return GridView.count(
           crossAxisSpacing: 24,

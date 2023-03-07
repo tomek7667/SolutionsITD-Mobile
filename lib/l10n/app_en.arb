@@ -1,5 +1,7 @@
 {
     "mainPage_name": "Solutions ITD",
     "mainPage_chooseYourApp": "Choose your app",
-    "mainPage_search": "Search..."
+    "mainPage_search": "Search...",
+    "mainPage_authenticate": "Authenticate",
+    "mainPage_logout": "Logout"
 }

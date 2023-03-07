@@ -44,15 +44,17 @@ android {
 
     defaultConfig {
         applicationId "com.solutionsitd.mobile"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
-        // required for oAuth
-        manifestPlaceholders += [auth0Domain: "dev-iem3fp3zlbud3boq.us.auth0.com", auth0Scheme: "https"]
-
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        // required for oAuth
+        // manifestPlaceholders += [auth0Domain: "dev-iem3fp3zlbud3boq.us.auth0.com", auth0Scheme: "https"]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders['auth0Domain'] = "dev-iem3fp3zlbud3boq.us.auth0.com"
+        manifestPlaceholders['auth0Scheme'] = "https"
+        manifestPlaceholders['appAuthRedirectScheme'] = "com.solutionsitd.mobile"
+        multiDexEnabled true
     }
 
     buildTypes {

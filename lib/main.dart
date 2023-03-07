@@ -1,4 +1,6 @@
+import 'package:auth0_flutter/auth0_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:solutions_itd_mobile/MainPage/connection_type_provider.dart';
 import 'package:solutions_itd_mobile/MainPage/main_page_filter_provider.dart';
@@ -10,6 +12,7 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await appData.initialize();
+  await dotenv.load();
   runApp(
     MultiProvider(
       providers: [
