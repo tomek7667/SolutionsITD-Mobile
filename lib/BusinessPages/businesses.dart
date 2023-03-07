@@ -5,7 +5,7 @@ List<BusinessData> companies = [
   BusinessData(
     name: "Example app 1",
     routeName: Screens.mainApp,
-    logoPath: "example_app_icon.png",
+    logoPath: "assets/example_app_icon.png",
     keywords: const ["example", "app", "1"],
   ),
   BusinessData(
@@ -16,14 +16,14 @@ List<BusinessData> companies = [
   BusinessData(
     name: "Example app 3",
     routeName: Screens.mainApp,
-    logoPath: "example_app_icon.png",
+    logoPath: "assets/example_app_icon.png",
     isDeveloped: true,
     keywords: const ["example", "app", "3"],
   ),
   BusinessData(
     name: "Example app 3",
     routeName: Screens.mainApp,
-    logoPath: "example_app_icon.png",
+    logoPath: "assets/example_app_icon.png",
     isSponsored: true,
     keywords: const ["example", "app", "3"],
   ),

@@ -17,8 +17,6 @@ class AppData {
   Future<void> initialize() async {
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      print("Initializing app data");
-      print(prefs);
       final userJson = prefs.getString('user');
       authToken = prefs.getString('auth_token');
       if (userJson != null) {

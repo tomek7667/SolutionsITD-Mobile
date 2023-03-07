@@ -8,6 +8,7 @@ import 'package:solutions_itd_mobile/utils/app_data.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await appData.initialize();
   runApp(
     MultiProvider(

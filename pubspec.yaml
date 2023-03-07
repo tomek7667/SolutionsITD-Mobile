@@ -27,7 +27,10 @@ dev_dependencies:
   flutter_lints: ^2.0.1
 
 flutter:
+  assets:
+    - assets/example_app_icon.png
+    - assets/logo_solutions_itd_small.png
+    - assets/logo_solutions_itd.png
+    - assets/only_logo.png
   generate: true
   uses-material-design: true
-  assets:
-    - assets/

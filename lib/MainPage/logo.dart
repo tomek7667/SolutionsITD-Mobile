@@ -23,7 +23,7 @@ class AppLogo extends StatelessWidget {
       ),
       child: const Image(
         image: AssetImage(
-          "logo_solutions_itd_small.png",
+          "assets/logo_solutions_itd_small.png",
         ),
         height: 56,
       ),
