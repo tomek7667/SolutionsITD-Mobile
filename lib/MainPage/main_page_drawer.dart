@@ -36,10 +36,15 @@ class _MainPageDrawerState extends State<MainPageDrawer> {
                   ),
                 ),
               ),
-            if (appData.user?.nickname != null)
+            if (appData.user?.name != null ||
+                appData.user?.nickname != null ||
+                appData.user?.email != null)
               Text(
-                AppLocalizations.of(context)
-                    .mainPage_loggedInAs(appData.user!.nickname!),
+                AppLocalizations.of(context).mainPage_loggedInAs(
+                  appData.user!.name ??
+                      appData.user!.nickname ??
+                      appData.user!.email!,
+                ),
               ),
             if (appData.user == null)
               DrawerButton(
