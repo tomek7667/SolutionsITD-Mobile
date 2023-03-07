@@ -10,7 +10,7 @@ class User {
   String? nickname;
   String? email;
   String? phoneNumber;
-  Uri? profileUrl;
+  Uri? pictureUrl;
   bool? isEmailVerified;
   bool? isPhoneNumberVerified;
 
@@ -20,7 +20,7 @@ class User {
     nickname = oAuthUserProfile?.nickname;
     email = oAuthUserProfile?.email;
     phoneNumber = oAuthUserProfile?.phoneNumber;
-    profileUrl = oAuthUserProfile?.profileUrl;
+    pictureUrl = oAuthUserProfile?.pictureUrl;
     isEmailVerified = oAuthUserProfile?.isEmailVerified;
     isPhoneNumberVerified = oAuthUserProfile?.isPhoneNumberVerified;
   }
@@ -32,7 +32,7 @@ class User {
       'nickname': nickname,
       'email': email,
       'phoneNumber': phoneNumber,
-      'profileUrl': profileUrl?.toString(),
+      'profileUrl': pictureUrl?.toString(),
       'isEmailVerified': isEmailVerified,
       'isPhoneNumberVerified': isPhoneNumberVerified,
     });

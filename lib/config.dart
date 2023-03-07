@@ -2,18 +2,11 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Config {
   final String bundleIdentifier = 'com.solutionsitd.mobile';
-  final String auth0LoginRedirectUri =
-      'com.solutionsitd.mobile://login-callback';
-  final String auth0LogoutRedirectUri =
-      'com.solutionsitd.mobile://logout-callback';
-  late String auth0Issuer;
 
   final String auth0Domain;
   final String auth0ClientId;
 
-  Config({required this.auth0Domain, required this.auth0ClientId}) {
-    auth0Issuer = 'https://$auth0Domain';
-  }
+  Config({required this.auth0Domain, required this.auth0ClientId});
 }
 
 final config = Config(

@@ -42,6 +42,14 @@ class AppData {
     await prefs.setString('access_token', accessToken);
   }
 
+  Future<void> clearUser() async {
+    user = null;
+    accessToken = null;
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('user');
+    await prefs.remove('access_token');
+  }
+
   Future<void> _setDeviceInfo() async {
     final deviceId = await _findOrCreateDeviceId();
     try {

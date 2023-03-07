@@ -46,15 +46,13 @@ android {
         applicationId "com.solutionsitd.mobile"
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
+
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        // required for oAuth
-        // manifestPlaceholders += [auth0Domain: "dev-iem3fp3zlbud3boq.us.auth0.com", auth0Scheme: "https"]
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        manifestPlaceholders['auth0Domain'] = "dev-iem3fp3zlbud3boq.us.auth0.com"
-        manifestPlaceholders['auth0Scheme'] = "https"
-        manifestPlaceholders['appAuthRedirectScheme'] = "com.solutionsitd.mobile"
-        multiDexEnabled true
+
+        manifestPlaceholders['auth0Domain'] = "@string/com_auth0_domain"
+        manifestPlaceholders['auth0Scheme'] = "@string/com_auth0_scheme"
+        // manifestPlaceholders['appAuthRedirectScheme'] = 'com.solutionsitd.mobile'
     }
 
     buildTypes {

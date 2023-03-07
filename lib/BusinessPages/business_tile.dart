@@ -43,7 +43,7 @@ class _BusinessTileState extends State<BusinessTile> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: GestureDetector(
+      child: InkWell(
         onTap: () {
           Navigator.pushReplacementNamed(
             context,

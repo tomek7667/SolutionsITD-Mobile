@@ -3,5 +3,13 @@
     "mainPage_chooseYourApp": "Choose your app",
     "mainPage_search": "Search...",
     "mainPage_authenticate": "Authenticate",
-    "mainPage_logout": "Logout"
+    "mainPage_logout": "Logout",
+    "mainPage_successfulLogout": "Successful logout",
+    "mainPage_successfulAuthentication": "Successful authentication",
+    "mainPage_loggedInAs": "Logged in as {username}",
+    "@mainPage_loggedInAs": {
+        "username": {
+            "type": "text"
+        }
+    }
 }

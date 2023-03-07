@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DrawerButton extends StatefulWidget {
-  final Function()? onPressed;
+  final Function onPressed;
   final IconData iconData;
   final String text;
 
@@ -19,8 +19,8 @@ class DrawerButton extends StatefulWidget {
 class _DrawerButtonState extends State<DrawerButton> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: widget.onPressed,
+    return InkWell(
+      onTap: () => {widget.onPressed()},
       child: SizedBox(
         height: 64,
         child: Row(
