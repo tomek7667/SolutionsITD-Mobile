@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:solutions_itd_mobile/config.dart';
+import 'package:solutions_itd_mobile/utils/alerts.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:solutions_itd_mobile/MainPage/logo.dart';
 import 'package:solutions_itd_mobile/utils/app_colors.dart';
@@ -17,11 +19,15 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
   Widget build(BuildContext context) {
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
-      ..setBackgroundColor(const Color(0x00000000))
+      ..setBackgroundColor(Colors.transparent)
       ..setNavigationDelegate(
         NavigationDelegate(
           onProgress: (int progress) {
-            // Update loading bar.
+            if (progress == 100) {
+              hideLoadingDialog(context);
+            } else {
+              showLoadingDialog(context);
+            }
           },
           onPageStarted: (String url) {},
           onPageFinished: (String url) {},
@@ -31,7 +37,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
           },
           onNavigationRequest: (NavigationRequest request) {
             print("normal request:");
-            print(request);
+            print(request.url);
             if (request.url.startsWith('https://www.youtube.com/')) {
               return NavigationDecision.prevent;
             }
@@ -39,7 +45,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
           },
         ),
       )
-      ..loadRequest(Uri.parse("https://www.example.com/"));
+      ..loadRequest(Uri.parse(Config.oAuthAuthorizeUrl));
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 64,
