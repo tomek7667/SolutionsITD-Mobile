@@ -1,0 +1,70 @@
+PODS:
+  - Auth0 (2.3.2):
+    - JWTDecode (~> 3.0)
+    - SimpleKeychain (~> 1.0)
+  - auth0_flutter (1.1.0):
+    - Auth0 (~> 2.3)
+    - Flutter
+  - connectivity (0.0.1):
+    - Flutter
+    - Reachability
+  - device_info (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - JWTDecode (3.0.1)
+  - Reachability (3.2)
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - SimpleKeychain (1.0.1)
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - auth0_flutter (from `.symlinks/plugins/auth0_flutter/ios`)
+  - connectivity (from `.symlinks/plugins/connectivity/ios`)
+  - device_info (from `.symlinks/plugins/device_info/ios`)
+  - Flutter (from `Flutter`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Auth0
+    - JWTDecode
+    - Reachability
+    - SimpleKeychain
+    - Toast
+
+EXTERNAL SOURCES:
+  auth0_flutter:
+    :path: ".symlinks/plugins/auth0_flutter/ios"
+  connectivity:
+    :path: ".symlinks/plugins/connectivity/ios"
+  device_info:
+    :path: ".symlinks/plugins/device_info/ios"
+  Flutter:
+    :path: Flutter
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
+  shared_preferences_foundation:
+    :path: ".symlinks/plugins/shared_preferences_foundation/ios"
+
+SPEC CHECKSUMS:
+  Auth0: 64da28fdc5cd499aa516dc4bfd0ace8efae2c1da
+  auth0_flutter: 2db6426f2a0489ff64318a0d2602a54aa9eef796
+  connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
+  device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  fluttertoast: eb263d302cc92e04176c053d2385237e9f43fad0
+  JWTDecode: 2eed97c2fa46ccaf3049a787004eedf0be474a87
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  shared_preferences_foundation: 986fc17f3d3251412d18b0265f9c64113a8c2472
+  SimpleKeychain: 130211269f88f038d7dc5254cf0b1b9ce978c398
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: cc1f88378b4bfcf93a6ce00d2c587857c6008d3b
+
+COCOAPODS: 1.11.3

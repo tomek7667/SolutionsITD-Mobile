@@ -22,7 +22,7 @@ class _MainGridState extends State<MainGrid> {
           crossAxisSpacing: 24,
           mainAxisSpacing: 24,
           crossAxisCount: count,
-          childAspectRatio: 5 / 6,
+          childAspectRatio: 5 / 7,
           padding: const EdgeInsets.all(24),
           scrollDirection: Axis.vertical,
           children: companies
