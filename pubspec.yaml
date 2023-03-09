@@ -23,6 +23,7 @@ dependencies:
   flutter_dotenv: ^5.0.2
   http: ^0.13.5
   fluttertoast: ^8.2.1
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
@@ -37,6 +38,7 @@ flutter:
     - assets/logo_solutions_itd_small.png
     - assets/logo_solutions_itd.png
     - assets/only_logo.png
+    - assets/example_business_logo.png
     - .env
   generate: true
   uses-material-design: true

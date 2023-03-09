@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solutions_itd_mobile/BusinessPages/business_data.dart';
+import 'package:solutions_itd_mobile/BusinessPages/develop_icon.dart';
+import 'package:solutions_itd_mobile/BusinessPages/sponsor_icon.dart';
 import 'package:solutions_itd_mobile/utils/app_colors.dart';
 
 class BusinessTile extends StatefulWidget {
@@ -74,6 +76,7 @@ class _BusinessTileState extends State<BusinessTile> {
                     padding: const EdgeInsets.all(4.0),
                     child: Text(
                       widget.name,
+                      textAlign: TextAlign.center,
                       style: const TextStyle(
                         color: Colors.black,
                         fontSize: 14,
@@ -83,43 +86,10 @@ class _BusinessTileState extends State<BusinessTile> {
                 ),
               ],
             ),
-            if (widget.isDeveloped)
-              Positioned(
-                top: 8,
-                right: 8,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: AppColors.white,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(4.0),
-                    child: Icon(
-                      Icons.build,
-                      color: AppColors.gray,
-                      size: 16.0,
-                    ),
-                  ),
-                ),
-              ),
+            if (widget.isDeveloped) const DevelopIcon(),
             if (widget.isSponsored)
-              Positioned(
-                top: 8,
-                right: 8 + (widget.isDeveloped ? 28 : 0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: AppColors.gold,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(4.0),
-                    child: Icon(
-                      Icons.star,
-                      color: AppColors.white,
-                      size: 16.0,
-                    ),
-                  ),
-                ),
+              SponsorIcon(
+                isDeveloped: widget.isDeveloped,
               ),
           ],
         ),

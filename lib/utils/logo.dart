@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:solutions_itd_mobile/utils/app_colors.dart';
 
 class AppLogo extends StatelessWidget {
-  const AppLogo({super.key});
+  final String logoPath;
+
+  const AppLogo({
+    super.key,
+    this.logoPath = "assets/logo_solutions_itd_small.png",
+  }) : super();
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
@@ -21,9 +27,9 @@ class AppLogo extends StatelessWidget {
           Radius.elliptical(24, 24),
         ),
       ),
-      child: const Image(
+      child: Image(
         image: AssetImage(
-          "assets/logo_solutions_itd_small.png",
+          logoPath,
         ),
         height: 56,
       ),

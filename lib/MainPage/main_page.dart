@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:solutions_itd_mobile/BusinessPages/main_grid.dart';
-import 'package:solutions_itd_mobile/MainPage/logo.dart';
+import 'package:solutions_itd_mobile/utils/logo.dart';
 import 'package:solutions_itd_mobile/MainPage/main_page_drawer.dart';
 import 'package:solutions_itd_mobile/MainPage/main_page_filter_provider.dart';
 import 'package:solutions_itd_mobile/MainPage/user_avatar.dart';
