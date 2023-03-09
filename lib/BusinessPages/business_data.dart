@@ -1,7 +1,7 @@
 class BusinessData {
   String name;
   final String routeName;
-  final String? logoPath;
+  final String logoPath;
   final bool isDeveloped;
   final bool isSponsored;
 
@@ -12,7 +12,7 @@ class BusinessData {
     required this.routeName,
     this.isDeveloped = false,
     this.isSponsored = false,
-    this.logoPath,
+    this.logoPath = "assets/example_app_icon.png",
     this.keywords = const [],
   });
 }

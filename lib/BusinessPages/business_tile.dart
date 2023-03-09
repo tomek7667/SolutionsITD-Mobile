@@ -57,7 +57,7 @@ class _BusinessTileState extends State<BusinessTile> {
                 Expanded(
                   child: Container(
                     decoration: BoxDecoration(
-                      color: AppColors.turquoise,
+                      // color: AppColors.turquoise,
                       image: widget.logoPath != null
                           ? DecorationImage(
                               image: AssetImage(widget.logoPath as String),
@@ -96,7 +96,7 @@ class _BusinessTileState extends State<BusinessTile> {
                     padding: EdgeInsets.all(4.0),
                     child: Icon(
                       Icons.build,
-                      color: AppColors.turquoise,
+                      color: AppColors.gray,
                       size: 16.0,
                     ),
                   ),
@@ -115,7 +115,7 @@ class _BusinessTileState extends State<BusinessTile> {
                     padding: EdgeInsets.all(4.0),
                     child: Icon(
                       Icons.star,
-                      color: AppColors.turquoise,
+                      color: AppColors.white,
                       size: 16.0,
                     ),
                   ),
