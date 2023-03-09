@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:solutions_itd_mobile/BusinessPages/bottom_nagivation.dart';
+import 'package:solutions_itd_mobile/BusinessPages/ExampleBusiness/example_business_bottom_nagivation.dart';
 import 'package:solutions_itd_mobile/BusinessPages/home_button.dart';
 import 'package:solutions_itd_mobile/utils/logo.dart';
 import 'package:solutions_itd_mobile/MainPage/user_avatar.dart';
